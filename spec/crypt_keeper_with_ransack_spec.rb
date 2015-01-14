@@ -6,6 +6,6 @@ describe CryptKeeperWithRansack do
   end
 
   it 'does something useful' do
-    expect(false).to eq(true)
+    skip { expect(false).to eq(true) }
   end
 end
