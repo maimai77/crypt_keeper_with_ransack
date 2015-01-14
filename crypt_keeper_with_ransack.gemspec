@@ -6,8 +6,8 @@ require 'crypt_keeper_with_ransack/version'
 Gem::Specification.new do |spec|
   spec.name          = "crypt_keeper_with_ransack"
   spec.version       = CryptKeeperWithRansack::VERSION
-  spec.authors       = ["maimai"]
-  spec.email         = ["maimai77@agileware.jp"]
+  spec.authors       = ["maimai77"]
+  spec.email         = ["kohta0707@gmail.com"]
   spec.summary       = %q{add ransacker for crypted attributes}
   spec.description   = %q{}
   spec.homepage      = ""
