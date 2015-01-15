@@ -5,7 +5,7 @@ describe CryptKeeperWithRansack do
     expect(CryptKeeperWithRansack::VERSION).not_to be nil
   end
 
-  describe "#search" do
+  describe "#ransack" do
     before :each do
       User.create(name: 'MyText')
     end
@@ -14,9 +14,9 @@ describe CryptKeeperWithRansack do
     it { expect(User.search_by_plaintext(:name, 'MyText').count).to eq 1 }
 
     it { expect(User.where(name: 'MyText').count).to eq 0 }
-    it { expect(User.search(name_eq: 'MyText').result.count).to eq 1 }
+    it { expect(User.ransack(name_eq: 'MyText').result.count).to eq 1 }
 
-    it { expect(User.search(name_cont: 'My').result.count).to eq 1 }
-    it { expect(User.search(name_cont: 'Your').result.count).to eq 0 }
+    it { expect(User.ransack(name_cont: 'My').result.count).to eq 1 }
+    it { expect(User.ransack(name_cont: 'Your').result.count).to eq 0 }
   end
 end
