@@ -13,8 +13,10 @@ module CryptKeeperWithRansack
     def crypt_keeper_with_ransack(*args)
       crypt_keeper_without_ransack(*args)
 
-      crypt_keeper_fields.each do |field|
-        add_crypt_ransacker field, key: crypt_keeper_options[:key]
+      if crypt_keeper_options.include?(:ransack)
+        crypt_keeper_fields.each do |field|
+          add_crypt_ransacker field, key: crypt_keeper_options[:key]
+        end
       end
     end
   end

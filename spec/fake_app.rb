@@ -25,7 +25,7 @@ CryptKeeperWithRansackTestApp::Application.initialize!
 
 # models
 class User < ActiveRecord::Base
-  crypt_keeper :name, encryptor: :postgres_pgp, key: 'super_good_password', ransacker: true
+  crypt_keeper :name, encryptor: :postgres_pgp, key: 'super_good_password', ransack: true
 end
 
 # migrations
